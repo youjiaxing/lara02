@@ -1,6 +1,10 @@
 <?php
+
 /**
  *
- * @author : 尤嘉兴
- * @version: 2019/7/24 9:37
  */
+function route_class()
+{
+    $name = Route::currentRouteName();
+    return $name ? str_replace('.', '-', $name) : $name;
+}
